@@ -1,5 +1,6 @@
-console.log("background");
-
-chrome.webNavigation.onCompleted.addListener(function(details) {
-    chrome.tabs.insertCSS(details.tabId, {file: "styles.css"});
+chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+    if (request.message == "resize")
+        sendResponse({
+            message : "resize"
+        });
 });

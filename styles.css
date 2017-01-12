@@ -1,7 +1,27 @@
-#video-container {
-	padding: 0px !important;
+.video-container {
+    padding: 0px !important;
 }
 
-#headline-2-text {
-	padding-left: 10px !important;
+.headline-2-text {
+    padding-left: 10px !important;
+}
+
+.rc-InteractiveTranscript {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    padding-top: 10px !important;
+}
+
+.bt3-col-md-12 {
+    overflow-Y: scroll !important;
+}
+
+.rc-ItemSecondaryNav {
+    overflow-Y: auto !important;
+    overflow-X: hidden !important;
+}
+
+.content-container {
+    overflow-Y: scroll !important;
+    overflow-X: hidden !important;
 }
