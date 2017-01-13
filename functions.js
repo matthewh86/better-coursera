@@ -15,7 +15,7 @@ const c_centreColumn = "content-container";
 const c_rightColumn = "flex-3";
 
 function resizeElementHeight(element, minus) {
-    console.log("resizeElementHeight");
+    //console.log("resizeElementHeight");
     var height = 0;
     var body = window.document.body;
     if (window.innerHeight) {
@@ -29,8 +29,8 @@ function resizeElementHeight(element, minus) {
 }
 
 function resizeContainersEvent() {
-    console.log("resizeContainersEvent");
-    
+    //console.log("resizeContainersEvent");
+
     // resize left nav pane
     var secondaryNav = document.getElementsByClassName(c_secondaryNav)[0];
     resizeElementHeight(secondaryNav, secondaryNav.getBoundingClientRect().top);
@@ -46,7 +46,7 @@ function resizeContainersEvent() {
 }
 
 function moveContainersAround() {
-    console.log("moveContainersAround");
+    //console.log("moveContainersAround");
 
     // move Downloads to the left
     var lectureResources = document.getElementsByClassName(c_lectureResources)[0];
@@ -64,7 +64,8 @@ function moveContainersAround() {
     transcriptContainer.appendChild(transcriptText);
 
     // Move forums to the centre
-    var forumsLink = document.getElementsByClassName(c_forumsLink)[0];
+    var forumsText = document.getElementsByClassName(c_forumsLink)[0];
+    var forumsLink = forumsText.parentElement;
     var extras = document.getElementsByClassName(c_extras)[0];
     extras.appendChild(forumsLink);
 
@@ -73,7 +74,7 @@ function moveContainersAround() {
 }
 
 function addResizeListener() {
-    console.log("addResizeListener");
+    //console.log("addResizeListener");
 
     window.addEventListener('resize', function() {
         if (timeoutId) {
@@ -103,12 +104,12 @@ function checkRequiredElementsAreLoaded() {
 }
 
 function initialiseFunctions() {
-    console.log("initialiseFunctions");
+    //console.log("initialiseFunctions");
 
     // wait until stuff has been loaded
     var checkExist = setInterval(function() {
         if (checkRequiredElementsAreLoaded()) {
-            console.log("Page appears to be loaded")
+            //console.log("Page appears to be loaded")
             clearInterval(checkExist);
             addResizeListener();
             moveContainersAround();

@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "Better Coursera Layout",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Better three column layout for Coursera video lectures. Transcript appears on the right, and downloads are shifted to the left.",
   "homepage_url" : "https://github.com/matthewh86/better-coursera-chrome",
 
