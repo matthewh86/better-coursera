@@ -15,7 +15,7 @@ const c_centreColumn = "content-container";
 const c_rightColumn = "flex-3";
 
 function resizeElementHeight(element, minus) {
-    //console.log("resizeElementHeight");
+    // console.log("resizeElementHeight");
     var height = 0;
     var body = window.document.body;
     if (window.innerHeight) {
@@ -29,7 +29,7 @@ function resizeElementHeight(element, minus) {
 }
 
 function resizeContainersEvent() {
-    //console.log("resizeContainersEvent");
+    // console.log("resizeContainersEvent");
 
     // resize left nav pane
     var secondaryNav = document.getElementsByClassName(c_secondaryNav)[0];
@@ -46,7 +46,7 @@ function resizeContainersEvent() {
 }
 
 function moveContainersAround() {
-    //console.log("moveContainersAround");
+    // console.log("moveContainersAround");
 
     // move Downloads to the left
     var lectureResources = document.getElementsByClassName(c_lectureResources)[0];
@@ -74,18 +74,14 @@ function moveContainersAround() {
 }
 
 function addResizeListener() {
-    //console.log("addResizeListener");
+    // console.log("addResizeListener");
 
     window.addEventListener('resize', function() {
         if (timeoutId) {
           clearTimeout(timeoutId);
         }
         timeoutId = setTimeout(function() {
-            chrome.runtime.sendMessage({message: "resize"}, function(response) {
-                if (response.message == "resize") {
-                    resizeContainersEvent();
-                }
-              });
+            resizeContainersEvent();
           timeoutId = 0;
         }, 100);
       }, false);
@@ -104,12 +100,12 @@ function checkRequiredElementsAreLoaded() {
 }
 
 function initialiseFunctions() {
-    //console.log("initialiseFunctions");
+    // console.log("initialiseFunctions");
 
     // wait until stuff has been loaded
     var checkExist = setInterval(function() {
         if (checkRequiredElementsAreLoaded()) {
-            //console.log("Page appears to be loaded")
+            // console.log("Page appears to be loaded")
             clearInterval(checkExist);
             addResizeListener();
             moveContainersAround();

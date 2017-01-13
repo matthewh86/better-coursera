@@ -6,11 +6,6 @@
   "description": "Better three column layout for Coursera video lectures. Transcript appears on the right, and downloads are shifted to the left.",
   "homepage_url" : "https://github.com/matthewh86/better-coursera-chrome",
 
-  "background" : {
-    "scripts" : ["background.js"],
-    "persistent" : false
-  },
-
   "permissions" : [
     "https://www.coursera.org/*",
     "http://www.coursera.org/*"
