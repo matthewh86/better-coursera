@@ -87,6 +87,21 @@ function addResizeListener() {
       }, false);
 }
 
+function addDomChangeListener() {
+    // console.log("addDomChangeListener");
+	MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
+
+	var observer = new MutationObserver(function(mutations, observer) {
+	    // console.log("mutation observed!");
+		initialiseFunctions();
+	});
+
+	observer.observe(document.getElementsByTagName("html")[0], {
+	  subtree: false,
+	  attributes: true
+	});
+}
+
 function checkRequiredElementsAreLoaded() {
     return document.getElementsByClassName(c_transcript).length > 0
             && document.getElementsByClassName(c_secondaryNav).length > 0
@@ -108,6 +123,7 @@ function initialiseFunctions() {
             // console.log("Page appears to be loaded")
             clearInterval(checkExist);
             addResizeListener();
+            addDomChangeListener();
             moveContainersAround();
         }
     }, 100);
