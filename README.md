@@ -8,6 +8,9 @@ I'm no expert with CSS or HTML, but the layout on coursera is appalling enough t
 Chrome Extension URL
 https://chrome.google.com/webstore/detail/better-coursera/jghdgipmnamkmfnelpbhokdplljjflme
 
+v.1.3.0
+* detect DOM change event
+
 v1.2.0
 * make the forum link work (woops)
 * removed console logging
