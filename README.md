@@ -21,6 +21,9 @@ v1.1.0
 * removed surplus permissions
 * moved more styling into styles.css
 
-v1.0.0
-First publish. Displays the video page in three columns, with the Downloads shifted to the left, the transcript shifted to the right into a new column, and the Transcript Search will always be visible above the transcript.
+v1.0.0 - first publish
+* Displays the video page in three columns
+* with the Downloads shifted to the left
+* the transcript shifted to the right into a new column
+* and the Transcript Search will always be visible above the transcript
 
